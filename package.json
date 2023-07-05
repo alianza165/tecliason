@@ -1,0 +1,35 @@
+{
+  "name": "material-next",
+  "version": "5.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+  },
+  "dependencies": {
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@headlessui/react": "^1.7.15",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "mdb-react-ui-kit": "^6.1.0",
+    "next": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "autoprefixer": "^10.4.14",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-materialnext-dev-203835-authRole",
+      "UnauthRoleArn": "arn:aws:iam::542077555355:role/amplify-materialnext-dev-203835-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::542077555355:role/amplify-materialnext-dev-203835-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-materialnext-dev-203835-deployment",
+      "UnauthRoleName": "amplify-materialnext-dev-203835-unauthRole",
+      "StackName": "amplify-materialnext-dev-203835",
+      "StackId": "arn:aws:cloudformation:us-east-1:542077555355:stack/amplify-materialnext-dev-203835/ad1f0070-1e6e-11ee-b95c-0ec67d5da3f3",
+      "AmplifyAppId": "d3ral238pmwqo1"
+    },
+    "categories": {
+      "auth": {
+        "materialnext5449d0fc": {}
+      }
+    }
+  }
+}

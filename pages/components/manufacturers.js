@@ -42,9 +42,9 @@ export default class MultipleItems extends Component {
     };
     return (
       <div className="w-full overflow-x-hidden bg-white rounded-lg shadow-lg overflow-hidden">
-        <h2 className="pt-16 flex justify-center">Manufacturers</h2>
-        <div className="px-4 pb-12">
-          <Slider {...settings} className="py-12">
+        <h2 className="pt-8 flex justify-center">Manufacturers</h2>
+        <div className="px-4 pb-8">
+          <Slider {...settings} className="py-6">
             <div>
               <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-1.png'/>
             </div>

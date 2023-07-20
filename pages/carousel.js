@@ -7,24 +7,27 @@ export default function CustomCarousel() {
   return (
     <Carousel showArrows={true} infiniteLoop={true} showIndicators={true} showStatus={false} autoPlay={true}>
       <div className="relative">
-        <img src="https://als-bucket-456.s3.amazonaws.com/item_pics/clients1.png" alt="Slide 2" className="w-full h-auto" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-          <h5 className="text-xl font-bold">First slide label</h5>
-          <p className="text-sm">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    <h4 className="text-xl font-bold block sm:hidden pt-2">Empowering Industrial Excellence</h4>
+        <img src="https://als-bucket-456.s3.amazonaws.com/tecliason/power-plant" alt="Slide 2" className="w-full h-auto" />
+        <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 text-black text-center hidden sm:block">
+          <h4 className="text-xl font-bold">Empowering Industrial Excellence</h4>
+          <p className="text-sm">Elevating manufacturing standards with cutting-edge solutions.</p>
         </div>
       </div>
       <div className="relative">
-        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg" alt="Slide 2" className="w-full h-auto" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-          <h5 className="text-xl font-bold">Second slide label</h5>
-          <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h4 className="text-xl font-bold block sm:hidden pt-2">Efficiency, Innovation, Reliability</h4>
+        <img src="https://als-bucket-456.s3.amazonaws.com/tecliason/motor-carousel" alt="Slide 2" className="w-full h-auto brightness-75" />
+        <div className="absolute top-3/4 left-3/4 transform -translate-x-1/2 -translate-y-1/2 text-white text-center hidden sm:block">
+          <h4 className="text-xl font-bold">Efficiency, Innovation, Reliability</h4>
+          <p className="text-sm">Driving industrial success through streamlined processes, groundbreaking ideas, and trusted performance.</p>
         </div>
       </div>
       <div className="relative">
-        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg" alt="Slide 3" className="w-full h-auto" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-          <h5 className="text-xl font-bold">Third slide label</h5>
-          <p className="text-sm">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h4 className="text-xl font-bold block sm:hidden pt-2">Customer-Centric Commitment</h4>
+        <img src="https://als-bucket-456.s3.amazonaws.com/tecliason/valves-carousel" alt="Slide 3" className="w-full h-auto brightness-75" />
+        <div className="absolute top-3/4 left-3/4 transform -translate-x-1/2 -translate-y-1/2 text-white text-center hidden sm:block">
+          <h4 className="text-xl font-bold">Customer-Centric Commitment</h4>
+          <p className="text-sm">Putting customers first with personalized care and unwavering commitment.</p>
         </div>
       </div>
     </Carousel>

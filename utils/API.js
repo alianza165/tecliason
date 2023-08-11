@@ -1,7 +1,9 @@
+'use client'
+
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: "https://www.princeautomation.org/",
+    baseURL: "http://localhost:8000/",
     headers: {
         'Accept':'application/json',
         'Content-Type':'application/json',

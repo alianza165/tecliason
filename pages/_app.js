@@ -11,6 +11,8 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { CartProvider } from '../utils/cartContext';
+import { ApiProvider } from '../utils/ApiContext';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -26,7 +28,11 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
+        <ApiProvider>
+        <CartProvider>
         <Component {...pageProps} />
+        </CartProvider>
+        </ApiProvider>
       </ThemeProvider>
     </CacheProvider>
   );

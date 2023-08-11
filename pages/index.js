@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Categories from './categories';
-import CustomCarousel from './carousel';
+import Categories from './components/categories';
 import Footer from './components/footer';
 import Feature from './components/feature';
 import Hero from './components/hero';
@@ -17,13 +16,13 @@ export default function Main() {
       <Box component="main">
         <Header />
 
-        <div class="py-8">
+        <div className="py-8">
         <Body />
         </div>
         <div className="w-full px-6">
         <Manufacturers />
         </div>
-        <div class="py-12">
+        <div className="py-12">
         <Categories />  
         </div>
         <Feature />    

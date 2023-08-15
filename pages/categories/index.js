@@ -22,14 +22,16 @@ export default function Products() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
   const [currentPage, setCurrentPage] = useState(1); // Current page number
-  const itemsPerPage = 30; // Number of items per page
+  const itemsPerPage = 20; // Number of items per page
   const selectedType = productTypes.find(productTypes => productTypes.product_type === name);
+  const [totalItems, setTotalItems] = useState([]);
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   useEffect(() => {
     if (name) {
       handleFetchTypeFilter();
     }
-  }, [name, currentPage]);
+  }, [name, currentPage, totalItems]);
 
   const handleFetchTypeFilter = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -39,6 +41,7 @@ export default function Products() {
       .then((res) => {
         const paginatedData = res.data.slice(startIndex, endIndex);
         setItems(paginatedData);
+        setTotalItems(res.data.length)
         setLoading(false);
       })
       .catch((error) => {
@@ -50,7 +53,7 @@ export default function Products() {
   return (
     <div>
       <Header />
-      <div className="bg-white">
+      <div className="bg-white mb-10 ">
       <Breadcrumb crumb={{ query, name }} />
         <div className="mx-auto max-w-2xl px-4 py-2 md:px-6 md:py-4 lg:max-w-7xl lg:px-6">
           <h2 className="sr-only">Products</h2>
@@ -71,23 +74,23 @@ export default function Products() {
           ) : (
             <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
               {items.map((product) => (
+                <div className="md:p-8">
                 <Link key={product.id} href={{ pathname: '/item', query: { name: product.item_name, filter_type:"categories", filter_name:name } }} passHref>
-                  
-                    <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                      <img
-                        src={product.image}
-                        alt={product.imageAlt}
-                        className="h-full w-full object-cover object-center group-hover:opacity-75"
-                      />
-                    </div>
-                    <h3 className="mt-4 text-sm text-gray-700">{product.item_name}</h3>
+                  <div className="bg-gray-600 hover:-translate-y-2 hover:rotate-2 transition-all aspect-h-1 aspect-w-1 h-10 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 sm:h-32">
+                  <img
+                    src={product.image}
+                    className="h-full w-full object-cover object-center group-hover:opacity-75 p-2"
+                  />
+                </div>
+                <h3 className="p-1 mt-2 text-base text-gray-700 bg-gray-200 w-fit">{product.item_name}</h3>
                     <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
 
                 </Link>
+                </div>
               ))}
             </div>
           )}
-           <div className="mt-6 flex justify-center">
+           <div className="mt-10 flex justify-center">
         <button
           onClick={() => setCurrentPage((prevPage) => prevPage - 1)}
           disabled={currentPage === 1}
@@ -95,6 +98,7 @@ export default function Products() {
         >
           Previous
         </button>
+        <p className="px-4 py-2">{currentPage} / {totalPages}</p> {/* Display page numbers */}
         <button
           onClick={() => setCurrentPage((prevPage) => prevPage + 1)}
           disabled={items.length < itemsPerPage}

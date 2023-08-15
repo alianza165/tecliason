@@ -22,14 +22,16 @@ export default function Products() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
   const [currentPage, setCurrentPage] = useState(1); // Current page number
-  const itemsPerPage = 30; // Number of items per page
+  const itemsPerPage = 20; // Number of items per page
   const selectedBrand = brands.find(brand => brand.brand === name);
+  const [totalItems, setTotalItems] = useState([]);
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   useEffect(() => {
     if (name) {
       handleFetchBrandsFilter();
     }
-  }, [name, currentPage]);
+  }, [name, currentPage, totalItems]);
 
   const handleFetchBrandsFilter = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -39,6 +41,7 @@ export default function Products() {
       .then((res) => {
         const paginatedData = res.data.slice(startIndex, endIndex);
         setItems(paginatedData);
+        setTotalItems(res.data.length)
         setLoading(false);
       })
       .catch((error) => {
@@ -68,7 +71,7 @@ export default function Products() {
           {loading ? (
             <p className="text-center text-gray-600">Loading...</p> // Loading state
           ) : (
-            <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 mt-10">
               {items.map((product) => (
                 <Link key={product.id} href={{ pathname: '/item', query: { name: product.item_name, filter_type:"brands", filter_name:name } }} passHref>
                   
@@ -76,7 +79,7 @@ export default function Products() {
                       <img
                         src={product.image}
                         alt={product.imageAlt}
-                        className="h-full w-full object-cover object-center group-hover:opacity-75"
+                        className="h-full w-full object-cover object-center group-hover:opacity-75 p-4"
                       />
                     </div>
                     <h3 className="mt-4 text-sm text-gray-700">{product.item_name}</h3>
@@ -94,6 +97,7 @@ export default function Products() {
         >
           Previous
         </button>
+        <p className="px-4 py-2">{currentPage} / {totalPages}</p> {/* Display page numbers */}
         <button
           onClick={() => setCurrentPage((prevPage) => prevPage + 1)}
           disabled={items.length < itemsPerPage}

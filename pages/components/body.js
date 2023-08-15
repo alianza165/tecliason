@@ -17,10 +17,10 @@ export default function Body() {
             <div className="bg-red-700 flex justify-center items-center border-solid border-2 border-red-400 rounded-md">
               <h2 className="text-xl font-bold my-1 text-gray-300 p-1">Popular Brands</h2>
             </div>
-            <ul className="list-none pt-2 pl-3 list-none font-sans">
+            <ul className="list-none p-4 list-none font-sans">
               {brands.slice(0, 10).map((brand, index) => (
                 <Link key={brand.id} href={{ pathname: '/brands', query: { name: brand.brand } }} passHref>
-                  <li key={index} className="py-0.5 text-black text-sm/[20px]">
+                  <li key={index} className="font-mono py-2 text-black text-base/[20px] tracking-wider underline hover:text-lg decoration-rose-700 hover:decoration-4 transition-all">
                     {brand.brand}
                   </li>
                 </Link>

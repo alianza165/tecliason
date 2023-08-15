@@ -6,7 +6,7 @@ export default function Breadcrumb({ crumb }) {
 
   if (numValues === 1) {
     return (
-      <div className="mt-4 ml-8 flex items-center">
+      <div className="mt-4 ml-4 flex items-center">
         <Link href={{ pathname: '/'}} passHref>
           <HomeIcon className="mb-3 w-6"/>
         </Link>
@@ -19,7 +19,7 @@ export default function Breadcrumb({ crumb }) {
   } else if (numValues === 2) {
   	if (crumb.cart_flag === "true") {
     return (
-      <div className="mt-4 ml-8 flex items-center">
+      <div className="mt-4 ml-4 flex items-center">
         <Link href={{ pathname: '/'}} passHref>
           <HomeIcon className="mb-3 w-6"/>
         </Link>
@@ -35,7 +35,7 @@ export default function Breadcrumb({ crumb }) {
       );
   } else {
     return (
-      <div className="mt-4 ml-8 flex items-center">
+      <div className="mt-4 ml-4 flex items-center">
         <Link href={{ pathname: '/'}} passHref>
           <HomeIcon className="mb-3 w-6"/>
         </Link>
@@ -51,7 +51,7 @@ export default function Breadcrumb({ crumb }) {
 	   );
   }} else if (numValues === 3) {
     return (
-      <div className="mt-4 ml-8 flex items-center">
+      <div className="mt-4 ml-4 flex items-center">
         <Link href={{ pathname: '/'}} passHref>
           <HomeIcon className="mb-3 w-6"/>
         </Link>

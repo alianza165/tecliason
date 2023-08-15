@@ -22,9 +22,9 @@ export default function Main() {
     <div>
     <Header />
     <Breadcrumb crumb={{ lastQueryPart }} />
-      <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 mx-4 md:mx-8 mt-8">
               {brands.map((brand) => (
-                <div className='p-8'>
+                <div className=''>
                 <Link key={brand.id} href={{pathname: '/brands', query: { name: brand.brand},}} passHref>
                   
                     <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">

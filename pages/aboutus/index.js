@@ -4,9 +4,9 @@ import Header from '../components/header';
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
+    <Header />
     <img src="https://als-bucket-456.s3.amazonaws.com/tecliason_pics/tecliason_background.png" className="absolute opacity-10 w-full rounded-2xl" />
-      <Header />
       <div className="bg-gradient-to-r from-gray-200 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gap-y-0 m-10">
           <div>
@@ -19,7 +19,7 @@ const AboutUs = () => {
             <img src="https://als-bucket-456.s3.amazonaws.com/tecliason_pics/feature-image1.jpg" className="w-full h-auto rounded-2xl" />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-x-10 gap-y-10 m-10 md:mt-20 divide-x-8 divide-gray-400 divide-double">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-x-10 gap-y-10 m-4 md:mt-20 divide-x-8 divide-gray-400 divide-dashed">
           <div className='col-span-3'>
             <h2 className="text-4xl font-semibold mb-4">Our Mission</h2>
             <p className="text-gray-700 w-4/5">
@@ -53,12 +53,11 @@ const AboutUs = () => {
           </div>
           </div>
           </div>
-          <div className='relative'>
-          <p className='absolute text-md w-full md:text-4xl md:m-16 m-6 md:w-3/4'>We synergize: Delivering excellence through collaborative customer service</p>
-          <img src="https://als-bucket-456.s3.amazonaws.com/tecliason_pics/together4.jpeg" className="w-full mt-20" />
-          </div>
-
     </div>
+    <div className='relative'>
+          <p className='absolute text-md w-full md:text-4xl md:m-16 m-6 md:w-3/4'>We synergize: Delivering excellence through collaborative customer service</p>
+          <img src="https://als-bucket-456.s3.amazonaws.com/tecliason_pics/together4.jpeg" className="w-full" />
+          </div>
 
       <Footer />
     </div>

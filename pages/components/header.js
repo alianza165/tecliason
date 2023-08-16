@@ -10,9 +10,8 @@ import MultiLevelDropdown from './dropdown';
 const navigation = [
 
 
-  { name: 'Home', href: '#', current: true },
+  { name: 'Home', href: '/', current: true },
   { name: 'About Us', href: '/aboutus', current: false },
-  { name: 'Testimonials', href: '#', current: false },
 ]
 
 function classNames(...classes) {

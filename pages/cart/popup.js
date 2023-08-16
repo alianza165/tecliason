@@ -26,10 +26,14 @@ const PopupModal = () => {
       });
   };
 
-  const handleCloseModal = () => {
-    if (isEmailValid) {
+  const handleSubmit = () => {
+    if (email && isEmailValid) {
       handleSendInquiry();
     }
+    setIsOpen(false);
+  }
+
+  const handleCloseModal = () => {
     setIsOpen(false);
   };
 
@@ -43,7 +47,7 @@ const PopupModal = () => {
   return (
     <>
       <button
-        className="px-1 py-2 bg-[#60a5fa] text-white rounded"
+        className="px-1 p-1 bg-[#60a5fa] text-white rounded"
         onClick={handleOpenModal}
       >
         Checkout
@@ -90,7 +94,7 @@ const PopupModal = () => {
                 className={`mt-3 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded ${
                   isEmailValid ? 'cursor-pointer' : 'cursor-not-allowed opacity-50'
                 }`}
-                onClick={handleCloseModal}
+                onClick={handleSubmit}
                 disabled={!isEmailValid}
               >
                 Submit

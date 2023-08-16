@@ -27,7 +27,7 @@ export default function Main() {
                 <div className=''>
                 <Link key={brand.id} href={{pathname: '/brands', query: { name: brand.brand},}} passHref>
                   
-                    <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                    <div className="shadow aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                       <img
                         src={brand.brand_image}
                         alt={brand.imageAlt}

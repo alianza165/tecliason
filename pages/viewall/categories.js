@@ -22,12 +22,12 @@ export default function Main() {
     <div>
     <Header />
     <Breadcrumb crumb={{ lastQueryPart }} />
-      <div className="grid grid-cols-2 mx-4 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
+      <div className="grid grid-cols-2 mx-4 gap-x-6 gap-y-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
               {productTypes.map((product) => (
               <div className="md:p-8">
               <Link key={product.id} href={{pathname: '/categories', query: { name: product.product_type},}} passHref>
 
-                <div className="bg-gray-600 hover:-translate-y-2 hover:rotate-2 transition-all aspect-h-1 aspect-w-1 h-10 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 sm:h-32">
+                <div className="shadow bg-gray-600 hover:-translate-y-2 hover:rotate-2 transition-all aspect-h-1 aspect-w-1 h-10 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 sm:h-32">
                   <img
                     src={product.type_image}
                     className="h-full w-full object-cover object-center group-hover:opacity-75 p-2"

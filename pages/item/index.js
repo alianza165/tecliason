@@ -23,10 +23,8 @@ export default function Products() {
   const { name } = router.query;
   const { filter_type } = router.query;
   const { filter_name } = router.query;
-  console.log(name)
-  console.log(filter_type)
-  console.log(filter_name)
-
+  const { cart_flag } = router.query;
+  const numValues = Object.keys(router.query).length;
   
 
   const [item, setItem] = useState([]);
@@ -51,7 +49,11 @@ export default function Products() {
     <div>
     <Header />
         <div className="bg-white">
-        <Breadcrumb crumb={{ filter_type, filter_name, name }} />
+          {numValues === 3 ? (
+            <Breadcrumb crumb={{ filter_type, filter_name, name }} />
+          ) : numValues === 2 ? (
+            <Breadcrumb crumb={{ name, cart_flag }} />
+          ) : null}
           <div className="border p-6 m-6">
             <h2 className="sr-only">Products</h2>
               {item.map((product) => (
@@ -72,7 +74,6 @@ export default function Products() {
                 <div className="aspect-h-1 aspect-w-1 overflow-hidden bg-gray-100 xl:aspect-h-8 xl:aspect-w-7">
                   <img
                     src={product.image}
-                    alt={product.imageAlt}
                     className="h-full w-full object-cover object-center group-hover:opacity-75"
                   />
                 </div>

@@ -16,11 +16,11 @@ export default function Categories() {
           <h2 className="text-2xl font-sans text-gray-900 flex justify-center pb-6 italic font-extralight decoration-double decoration-gray-400 underline">Our Top Products</h2>
 
           <div className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-            {productTypes.map((product) => (
+            {productTypes.slice(0, 6).map((product, index) => (
               <div className="md:p-8">
               <Link key={product.id} href={{pathname: '/categories', query: { name: product.product_type},}} passHref>
 
-                <div className="bg-gray-600 hover:-translate-y-2 hover:rotate-2 transition-all aspect-h-1 aspect-w-1 h-10 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 sm:h-32">
+                <div className="shadow-lg bg-gray-600 hover:-translate-y-1 hover:rotate-1 transition-all aspect-h-1 aspect-w-1 h-10 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 sm:h-32">
                   <img
                     src={product.type_image}
                     className="h-full w-full object-cover object-center group-hover:opacity-75 p-2"

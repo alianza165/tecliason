@@ -5,7 +5,7 @@ export default function Breadcrumb({ crumb }) {
   const numValues = Object.keys(crumb).length;
 
   if (numValues === 1) {
-    return (
+      return (
       <div className="mt-4 ml-4 flex items-center">
         <Link href={{ pathname: '/'}} passHref>
           <HomeIcon className="mb-3 w-6"/>
@@ -24,11 +24,7 @@ export default function Breadcrumb({ crumb }) {
           <HomeIcon className="mb-3 w-6"/>
         </Link>
         <ChevronRightIcon className="mb-2 p-2 w-8 h-8"/>
-        <Link key={crumb.id} href={{ pathname: `viewall/${crumb.query}`}} passHref>
-          <h6 className='p-2'>{crumb.query}</h6>
-        </Link>
-        <ChevronRightIcon className="mb-2 p-2 w-8 h-8"/>
-        <Link key={crumb.id} href={{ pathname: `/${crumb.query}`, query: { name: crumb.name } }} passHref>
+        <Link key={crumb.id} href={{ pathname: '/item', query: { name: crumb.name, cart_flag:"true"} }} passHref>
           <h6 className='p-2'>{crumb.name}</h6>
         </Link>
       </div>

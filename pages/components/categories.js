@@ -2,6 +2,7 @@ import Link from 'next/link';
 import API from '../../utils/API';
 import { useState, useEffect } from "react";
 import { useApiContext } from '../../utils/ApiContext';
+import Image from 'next/image';
 
 
 export default function Categories() {
@@ -21,8 +22,9 @@ export default function Categories() {
               <Link key={product.id} href={{pathname: '/categories', query: { name: product.product_type},}} passHref>
 
                 <div className="shadow-lg bg-gray-600 hover:-translate-y-1 hover:rotate-1 transition-all aspect-h-1 aspect-w-1 h-10 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 sm:h-32">
-                  <img
+                  <Image
                     src={product.type_image}
+                    width={200} height={200}
                     className="h-full w-full object-cover object-center group-hover:opacity-75 p-2"
                   />
                 </div>

@@ -3,6 +3,7 @@ import { Menu, Transition } from '@headlessui/react';
 import { ShoppingCartIcon, ChevronDownIcon, InboxArrowDownIcon } from '@heroicons/react/20/solid';
 import { CartContext } from '../../utils/cartContext';
 import Link from 'next/link';
+import Image from 'next/image'
 
 const CartComponent = () => {
   const { cartItems, removeItemFromCart, clearCart } = useContext(CartContext);
@@ -46,8 +47,9 @@ const CartComponent = () => {
                 {cartItems.map((product) => (
                   <li key={product.id} className="flex py-6">
                     <div className="h-16 w-16 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                      <img
+                      <Image
                         src={product.image}
+                        width={130} height={130}
                         className="h-full w-full object-cover object-center"
                       />
                     </div>

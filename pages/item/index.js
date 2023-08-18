@@ -8,6 +8,7 @@ import { Fragment, useState, useEffect } from "react";
 import API from '../../utils/API';
 import Product from './product';
 import Breadcrumb from '../../utils/breadcrumb'
+import Image from 'next/image'
 
 
 //import Breadcrumb from '../components/breadcrumb';
@@ -72,8 +73,9 @@ export default function Products() {
               </div>
               <div>
                 <div className="aspect-h-1 aspect-w-1 overflow-hidden bg-gray-100 xl:aspect-h-8 xl:aspect-w-7">
-                  <img
+                  <Image
                     src={product.image}
+                    width={200} height={200}
                     className="h-full w-full object-cover object-center group-hover:opacity-75"
                   />
                 </div>

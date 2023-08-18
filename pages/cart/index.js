@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { CartContext } from '../../utils/cartContext';
 import PopupModal from './popup';
 import { InboxArrowDownIcon } from '@heroicons/react/20/solid';
+import Image from 'next/image'
 //import Breadcrumb from '../components/breadcrumb';
 
 // pages/brand.js (or the appropriate file where you want to access the brand name)
@@ -36,8 +37,9 @@ export default function Products() {
                 {cartItems.map((product) => (
                   <li key={product.id} className="flex py-6">
                     <div className="h-32 w-32 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                      <img
+                      <Image
                         src={product.image}
+                        width={130} height={130}
                         className="h-full w-full object-cover object-center"
                       />
                     </div>

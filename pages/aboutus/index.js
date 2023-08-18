@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/footer'
 import Header from '../components/header';
+import Image from 'next/image';
 
 const AboutUs = () => {
   return (
@@ -16,7 +17,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div>
-            <img src="https://ducaqjqbmh7lv.cloudfront.net/tecliason_pics/feature-image1.jpg" className="w-full h-auto rounded-2xl" />
+            <Image src="https://ducaqjqbmh7lv.cloudfront.net/tecliason_pics/feature-image1.jpg" width={400} height={400} className="w-full h-auto rounded-2xl" />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-x-10 gap-y-10 m-4 md:mt-20 divide-x-8 divide-gray-400 divide-dashed">
@@ -56,7 +57,7 @@ const AboutUs = () => {
     </div>
     <div className='relative'>
           <p className='absolute text-md w-full md:text-4xl md:m-16 m-6 md:w-3/4'>We synergize: Delivering excellence through collaborative customer service</p>
-          <img src="https://ducaqjqbmh7lv.cloudfront.net/tecliason_pics/together4.jpeg" className="w-full" />
+          <Image src="https://ducaqjqbmh7lv.cloudfront.net/tecliason_pics/together4.jpeg" width={600} height={600} className="w-full" />
           </div>
 
       <Footer />

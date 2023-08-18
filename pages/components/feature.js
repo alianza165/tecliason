@@ -1,4 +1,5 @@
 import { ClipboardDocumentCheckIcon, LockClosedIcon, ServerIcon, ArrowTrendingDownIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image';
 
 const features = [
   {
@@ -44,9 +45,8 @@ export default function Feature() {
               </dl>
             </div>
           </div>
-          <img
+          <Image
             src="https://ducaqjqbmh7lv.cloudfront.net/tecliason/feature-image2.jpg"
-            alt="Product screenshot"
             className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
             width={2432}
             height={1442}

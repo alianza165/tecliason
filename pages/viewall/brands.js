@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useApiContext } from '../../utils/ApiContext';
 import Breadcrumb from '../../utils/breadcrumb'
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 
 export default function Main() {
@@ -28,9 +29,9 @@ export default function Main() {
                 <Link key={brand.id} href={{pathname: '/brands', query: { name: brand.brand},}} passHref>
                   
                     <div className="shadow aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                      <img
+                      <Image
                         src={brand.brand_image}
-                        alt={brand.imageAlt}
+                        width={200} height={200}
                         className="object-contain object-center group-hover:opacity-75 p-4"
                       />
                     </div>

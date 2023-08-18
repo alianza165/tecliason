@@ -46,52 +46,52 @@ export default class MultipleItems extends Component {
         <div className="px-4 pb-8">
           <Slider {...settings} className="py-6">
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-1.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-1.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-10-1.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-10-1.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-11-1.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-11-1.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-12-1.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-12-1.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-13.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-13.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-14.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-14.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-15.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-15.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-16.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-16.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-2.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-2.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-3.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-3.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-4.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-4.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-5.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-5.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-6.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-6.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-7.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-7.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-8.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-8.png'/>
             </div>
             <div>
-              <img className="object-scale-down h-32" src='https://als-bucket-456.s3.amazonaws.com/tecliason/Tecliaison-LTD-Icon-9-1.png'/>
+              <img className="object-scale-down h-32" src='https://ducaqjqbmh7lv.cloudfront.net/tecliason/Tecliaison-LTD-Icon-9-1.png'/>
             </div>
           </Slider>
         </div>

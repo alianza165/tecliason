@@ -83,12 +83,12 @@ export default function Header() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-8 w-auto lg:hidden"
-                    src="https://als-bucket-456.s3.amazonaws.com/tecliason/tecliason.png"
+                    src="https://ducaqjqbmh7lv.cloudfront.net/tecliason/tecliason.png"
                     alt="Your Company"
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
-                    src="https://als-bucket-456.s3.amazonaws.com/tecliason/tecliason.png"
+                    src="https://ducaqjqbmh7lv.cloudfront.net/tecliason/tecliason.png"
                     alt="Your Company"
                   />
                 </div>

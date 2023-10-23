@@ -36,7 +36,7 @@ export default class MultipleItems extends Component {
     const { slidesToShow } = this.state;
     const settings = {
       infinite: true,
-      slidesToShow: 6,
+      slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
       speed: 2000,

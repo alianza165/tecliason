@@ -19,7 +19,7 @@ export default function Main() {
         <div className="py-8">
         <Body />
         </div>
-        <div className="w-full px-6">
+        <div className="w-full px-6 hidden md:block">
         <Manufacturers />
         </div>
         <div className="py-12">

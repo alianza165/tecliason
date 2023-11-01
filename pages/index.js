@@ -9,24 +9,37 @@ import Manufacturers from './components/manufacturers';
 import Header from './components/header';
 
 export default function Main() {
-
-
   return (
-
-      <Box component="main">
+    <Box component="main">
+      {/* Header and Body with the background */}
+      <div className="w-full relative  h-max">
+        <div
+          className="bg-local absolute inset-0 opacity-50 brightness-50 h-screen"
+          style={{
+            backgroundImage: 'url("https://ducaqjqbmh7lv.cloudfront.net/tecliason/valves-carousel")',
+            zIndex: -1, // Place the background behind other content
+          }}
+        ></div>
         <Header />
+        <div className="pt-8 md:py-8">
+          <Body />
+        </div>
+      </div>
 
-        <div className="py-8">
-        <Body />
-        </div>
-        <div className="w-full px-6 hidden md:block">
+
+      {/* Manufacturers */}
+      <div className="w-full px-6 hidden md:block">
         <Manufacturers />
-        </div>
-        <div className="py-12">
-        <Categories />  
-        </div>
-        <Feature />    
-        <Footer />  
-      </Box>
+      </div>
+
+      {/* Categories */}
+      <div className="py-12">
+        <Categories />
+      </div>
+
+      {/* Feature and Footer */}
+      <Feature />
+      <Footer />
+    </Box>
   );
 }

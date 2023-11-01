@@ -6,12 +6,12 @@ import React, { useContext } from 'react';
 import Link from 'next/link';
 import CartComponent from './cart';
 import MultiLevelDropdown from './dropdown';
+import DropdownAbout from './dropdownabout';
 
 const navigation = [
 
 
   { name: 'Home', href: '/', current: true },
-  { name: 'About Us', href: '/aboutus', current: false },
 ]
 
 function classNames(...classes) {
@@ -22,47 +22,9 @@ export default function Header() {
 
 
   return (
-    <div>
-    <div className="hidden sm:block">
-    <div className="relative flex items-center justify-between w-full bg-red-700 p-0.5">
-    
-    <div className="flex items-center text-light">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                </svg>
-                enquiry@tecliaison.com
-    </div>
-    
-    <div className="flex items-center text-light">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                </svg>
-                + 00 44 7485 121884 
-    </div>
-    
-    <div className="flex items-center">
-    <form className="flex items-center">
-      <input
-        type="text"
-        placeholder="Part number, Manufacturer"
-        className="px-4 mr-2 bg-white text-gray-800 rounded focus:outline-none focus:ring focus:border-blue-500"
-      />
-      <button
-        type="submit"
-        className="bg-black hover:bg-blue-700 text-white font-bold px-4 rounded"
-      >
-        Search
-      </button>
-    </form>
-    </div>
+    <div className="md:p-4">
 
-    <div className="flex items-center pr-4 z-20">
-      <CartComponent />
-    </div>
-
-    </div>
-    </div>
-    <Disclosure as="nav" className="bg-gray-200">
+    <Disclosure as="nav">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -105,6 +67,9 @@ export default function Header() {
                       </Link>
                     ))}
                 <div className="z-10">
+                  <DropdownAbout />
+                </div>
+                <div className="z-10">
                   <MultiLevelDropdown />
                 </div>
                   </div>
@@ -115,6 +80,19 @@ export default function Header() {
               </div>
               <div className="hidden sm:block">
               <div className=" inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <form className="flex items-center px-4">
+                  <input
+                    type="text"
+                    placeholder="Part number, Manufacturer"
+                    className="px-4 mr-2 bg-white text-gray-800 rounded focus:outline-none focus:ring focus:border-blue-500"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-black hover:bg-blue-700 text-white font-bold px-4 rounded"
+                  >
+                    Search
+                  </button>
+                </form>
                 <button
                   type="button"
                   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -175,6 +153,9 @@ export default function Header() {
                     </Menu.Items>
                   </Transition>
                 </Menu>
+                <div className="flex items-center px-4 z-20">
+                  <CartComponent />
+                </div>
               </div>
               </div>
 

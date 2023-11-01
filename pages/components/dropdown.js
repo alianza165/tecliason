@@ -14,10 +14,10 @@ export default function Example() {
   const { productTypes } = useApiContext();
 
   return (
-    <Menu menuButton={<MenuButton className="text-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Products</MenuButton>}>
+    <Menu menuButton={<MenuButton className="text-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium transition-all">Products</MenuButton>}>
       <SubMenu label="Brands">
         {brands.slice(0, 6).map((brand, index) => (
-          <MenuItem>
+          <MenuItem className="transition-all">
             <Link className='text-black text-sm' key={brand.id} href={{ pathname: '/brands', query: { name: brand.brand } }} passHref>
               {brand.brand}
             </Link>

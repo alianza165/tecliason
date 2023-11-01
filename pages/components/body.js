@@ -1,6 +1,7 @@
 import { Dialog } from '@headlessui/react';
 import CustomCarousel from '../carousel';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import API from '../../utils/API';
 import { useState, useEffect } from "react";
@@ -11,35 +12,18 @@ export default function Body() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 px-6">
-        <div className="relative h-full grid grid-rows-2 grid-flow-col gap-4 bg-white rounded-lg shadow-lg hidden sm:block items-stretch">
-          <div className="p-2">
-            <div className="bg-red-700 flex justify-center items-center border-solid border-2 border-red-400 rounded-md">
-              <h2 className="text-xl font-bold my-1 text-gray-300 p-1">Popular Brands</h2>
-            </div>
-            <ul className="list-none p-4 list-none font-sans">
-              {brands.slice(0, 10).map((brand, index) => (
-                <Link key={brand.id} href={{ pathname: '/brands', query: { name: brand.brand } }} passHref>
-                  <li key={index} className="font-mono py-2 text-black text-base/[20px] tracking-wider underline hover:text-lg decoration-rose-700 hover:decoration-4 transition-all">
-                    {brand.brand}
-                  </li>
-                </Link>
-              ))}
-            </ul>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 gap-y-0 m-10">
+          <div>
+            <h1 className="font-bold text-5xl md:text-7xl mb-4 text-black">We’re changing the way people connect.</h1>
+            <p className="text-black mb-6 text-xl pt-6 pr-20">
+              We are a trading house that specializes in selling mechanical and electrical parts and equipment for various industrial plants, including power plants, desalination plants, chemical plants, and refineries.
+            </p>
           </div>
-          <div className="absolute inset-x-0 bottom-0 bg-gray-100 px-4 py-1 border-t border-gray-200 flex justify-center items-center self-end">
-            <Link href={{ pathname: '/viewall/brands' }} passHref>
-              <button className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm/[20px] w-full">
-                View All
-              </button>
-            </Link>
+          <div className="hidden sm:block">
+            <Image src="https://ducaqjqbmh7lv.cloudfront.net/tecliason_pics/feature-image1.jpg" width={400} height={400} className="w-full h-auto rounded-2xl" />
           </div>
         </div>
-        <div className="bg-white rounded-lg shadow-lg col-span-4">
-          {/* Assuming CustomCarousel is consuming the "brands" array */}
-          <CustomCarousel />
-        </div>
+
       </div>
-    </div>
   );
 }
